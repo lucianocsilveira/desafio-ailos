@@ -1,0 +1,128 @@
+<div id="form-search">
+  <div class="timeline-container">
+    <ul class="timeline" id="timeline">
+      <li class="li complete">
+        <div class="status complete">
+          <h3 class="complete">Início</h3>
+        </div>
+      </li>
+      <li class="li">
+        <div class="status">
+          <h3>Documentos</h3>
+        </div>
+      </li>
+      <li class="li">
+        <div class="status">
+          <h3>Dados cadastrais</h3>
+        </div>
+      </li>
+      <li class="li">
+        <div class="status">
+          <h3>Admissão</h3>
+        </div>
+      </li>
+     </ul>
+  </div>
+
+  <section>
+    <h2 class="title">Informe o CPF do futuro cooperado(a)</h2>
+    <span class="subtitle">Se necessário, você pode duplicar uma conta existente ou pausar e retornar este cadastro futuramente</span><br />
+    <span class="subtitle">Digite apenas os números(sempontos ou traços)</span>
+  </section>
+
+  <section class="search-field">
+    <div class="cpf-input">
+      <label>CPF</label>
+      <input [textMask]="{mask: mask}" type="text" name="cpf" id="cpf" [(ngModel)]="cpfValue" >
+    </div>
+    <div (click)="search()" class="btn-primary">
+      <span> Consultar por CPF</span>
+    </div>
+  </section>
+</div>
+
+
+<div *ngIf="showResult" class="card-container">
+  <div class="card">
+    <div class="card-header">
+      <span class="title">Situação cadastral do CPF</span>
+      <span class="subtitle">Consulta na Receita Federal</span>
+    </div>
+    <div class="card-body">
+      <div class="card-info-group">
+        <span style="color: #d1d1d1;" class="material-icons">person</span>
+        <div class="card-info">
+          <span class="label">Nome</span>
+          <span class="info">{{ userCooperated.name }}</span>
+        </div>
+      </div>
+      <div class="card-info-group">
+        <span *ngIf="userCooperated.situation === 'REGULAR'" style="color: #92d828;" class="material-icons">
+          check_circle_outline
+          </span>
+          <span *ngIf="userCooperated.situation !== 'REGULAR'" style="color: red;" class="material-icons">
+            error_outline
+            </span>
+
+          <div class="card-info">
+          <span class="label">Situação do CPF</span>
+          <span class="info">{{ userCooperated.situation }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="title">Conta aplicação</span>
+      <span class="subtitle">{{ userCooperated.institution }}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-info-group">
+        <span style="color: #d1d1d1;" class="material-icons">credit_card</span>
+        <div class="card-info">
+          <span class="label">Número da conta</span>
+          <span class="info">{{ userCooperated.applicationAccountNumber }}</span>
+        </div>
+      </div>
+      <div class="card-info-group">
+        <div class="card-info ">
+          <span class="info duplicate">Duplicar conta</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="title">Conta corrente</span>
+      <span class="subtitle">{{ userCooperated.institution }}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-info-group">
+        <span style="color: #d1d1d1;" class="material-icons">credit_card</span>
+        <div class="card-info">
+          <span class="label">Número da conta</span>
+          <span class="info">{{ userCooperated.applicationNumber }}</span>
+        </div>
+      </div>
+      <div class="card-info-group">
+        <div class="card-info ">
+          <span class="info duplicate">Duplicar conta</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+<div class="btn-footer">
+  <div (click)="search()" class="btn-primary btn-large">
+    <span> Iniciar nova admissão</span>
+  </div>
+  <div (click)="search()" class="btn-primary-outline btn-large">
+    <span> Dicas para admissão</span>
+  </div>
+</div>

@@ -1,0 +1,241 @@
+.btn-primary{
+  height: 20px;
+  margin-left: 10px;
+  background-color: #165C7D;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+
+}
+
+.btn-primary-outline{
+  height: 20px;
+  margin-left: 10px;
+  background-color:  #e3ebef;
+  color: 165C7D;
+  border: 1px solid #165C7D;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+
+}
+
+.btn-large{
+  padding: 14px 23px;
+}
+.btn-footer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  background: white;
+  width: calc(100vw - 100px);
+  height: 87px;
+  left: 100px;
+}
+
+#form-search{
+
+  .timeline-container{
+
+    .timeline{
+
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    .li{
+
+      transition: all 200ms ease-in;
+    }
+
+    .timestamp{
+      margin-bottom: 20px;
+      padding: 0px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 100;
+
+    }
+    .status{
+      padding: 0px 40px;
+      display: flex;
+      justify-content: center;
+      border-top: 2px solid #D0DEE5;
+      position: relative;
+      transition: all 200ms ease-in;
+
+      h3{
+        font-size: 14px;
+        font-weight: 600;
+        color: #D0DEE5;
+        &.complete{
+          color: #165C7D;
+        }
+
+      }
+      &:before{
+        content: '';
+        width: 25px;
+        height: 25px;
+        background-color: #D0DEE5;
+        border-radius: 25px;
+        border: 1px solid #D0DEE5;
+        position: absolute;
+        top: -15px;
+        left: 42%;
+        transition: all 200ms ease-in;
+
+      }
+    }
+    .li.complete{
+      .status{
+        //border-top: 2px solid #66DC71;
+        &:before{
+          border: 2px solid #165C7D;
+          transition: all 200ms ease-in;
+          background-color: #e3ebef;
+        h3{
+          color: red;
+        }
+
+        }
+
+      }
+
+    }
+
+    @media (min-device-width: 320px) and (max-device-width: 700px){
+
+      .timeline{
+        list-style-type: none;
+        display: block;
+
+      }
+      .li{
+        transition: all 200ms ease-in;
+        display: flex;
+        width: inherit;
+
+      }
+      .timestamp{
+        width: 100px;
+
+      }
+      .status{
+
+        &:before{
+          left: -8%;
+          top: 30%;
+          transition: all 200ms ease-in ;
+
+        }
+      }
+    }
+
+
+    }
+
+
+  }
+
+  .search-field{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+
+
+    .cpf-input{
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+
+      input{
+        width: 200px;
+        height: 24px;
+      }
+
+    }
+
+  }
+
+  .title{
+    font-weight: 400;
+    font-size: 24px;
+
+  }
+  .subtitle{
+    font-size: 14px;
+    font-weight: 300;
+    //color: #A7B0B5;
+  }
+}
+
+.card-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .card{
+    width: 270px;
+    border: 1px solid #d0d0d0;
+    margin: 15px 20px 0 0;
+    padding: 19px;
+    box-shadow: 1px 3px 7px -2px rgb(0 0 0 / 50%);
+    background-color: white;
+    border-radius: 4px;
+
+    .card-header{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+
+      .title{
+        font-size: 18px;
+        font-weight: 800;
+      }
+      .subtitle{
+        font-size: 13px;
+        color: #A7B0B5;
+      }
+    }
+    .card-info-group{
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      span{
+        margin-right: 15px;
+        font-size: 27px;
+      };
+
+      .card-info{
+        display: flex;
+        flex-direction: column;
+
+        .duplicate{
+          color: #165C7D;
+          cursor: pointer;
+          margin-top: 10px;
+
+        }
+        .label{
+          font-size: 13px;
+          color: #A7B0B5;
+        }
+        .info{
+          font-size: 15px;
+          //color: #A7B0B5;
+        }
+      }
+    }
+  }
+}

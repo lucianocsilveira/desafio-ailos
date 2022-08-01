@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "cpf": "51824441339",
+    "situation": "REGULAR",
+    "applicationNumber": "99999999-9",
+    "applicationAccountNumber": "888888888-8"
+  },
+  {
+    "id": 2,
+    "name": "Aurora Lívia Baptista",
+    "cpf": "21713062895",
+    "situation": "CANCELADA",
+    "applicationNumber": "7777777-7",
+    "applicationAccountNumber": "66666666-6"
+  },
+  {
+    "id": 3,
+    "name": "Isaac Márcio Moraes",
+    "cpf": "62719397679",
+    "situation": "SUSPENSA",
+    "applicationNumber": "555555-5",
+    "applicationAccountNumber": "444444-4"
+  }
+]

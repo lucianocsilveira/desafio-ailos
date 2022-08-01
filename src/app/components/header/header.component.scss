@@ -1,0 +1,96 @@
+#main-header {
+  font-family: 'Exo 2';
+  padding: 0px 20px;
+  top: 0;
+  position: fixed;
+  width: calc(100% - 100px);
+  height: 90px;
+  box-shadow: 0 1px 15px rgb(0 0 0 / 4%), 0 1px 6px rgb(0 0 0 / 4%);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: white;
+  color: black;
+  z-index: 100;
+  left: 100px;
+
+	.menu-toggle {
+		width: 28px;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		cursor: pointer;
+		margin-left: 20px;
+		div {
+			width: 24px;
+			height: 1px;
+			background: white;
+			margin: 3px 0;
+		}
+	}
+
+  .title{
+
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .subtitle{
+
+    font-size: 14px;
+    font-weight: 300;
+    color: #A7B0B5;
+  }
+
+	.logo {
+		width: 260px;
+		margin-left: 62px;
+	}
+
+	.header-icon {
+		font-size: 19px;
+		vertical-align: middle;
+		cursor: pointer;
+		height: 36px;
+		width: 36px;
+		line-height: 36px;
+		display: inline-block;
+		text-align: center;
+		border-radius: 8px;
+		margin: 0 2px;
+		&.dropdown-toggle {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.header-part-right {
+		display: flex;
+		align-items: center;
+		.user {
+			margin-right: 2rem;
+      width: 225px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+			img {
+				width: 36px;
+				height: 36px;
+				border-radius: 50%;
+        object-fit: cover;
+			}
+		}
+    .icon{
+      color: #165C7D;
+    }
+		.name{
+      background-color: white;
+      border: 2px solid #165C7D;
+      border-radius: 40px;
+      padding: 7px 16px;
+      color: #165C7D;
+    }
+
+	}
+
+}
